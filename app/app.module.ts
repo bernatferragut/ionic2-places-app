@@ -6,14 +6,14 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { NewPlace } from './../pages/new-place/new-place';
+import { NewPlaces } from './../pages/new-places/new-places';
 
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    NewPlace
+    NewPlaces
   ],
   imports: [
     BrowserModule,
@@ -23,7 +23,7 @@ import { NewPlace } from './../pages/new-place/new-place';
   entryComponents: [
     MyApp,
     HomePage,
-    NewPlace
+    NewPlaces
   ],
   providers: [
     StatusBar,
