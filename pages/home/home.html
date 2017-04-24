@@ -1,12 +1,18 @@
 <ion-header>
   <ion-navbar>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="onLoadNewPlace()">
+        <ion-icon name="add"></ion-icon>
+    </button>
+    </ion-buttons>
+
     <ion-title>
       My Fav Places App
     </ion-title>
+
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
   <p>Welcome to my Fav Places App</p>
-  <button ion-button (click)="onLoadNewPlace()"> ADD A NEW PLACE</button>
 </ion-content>
