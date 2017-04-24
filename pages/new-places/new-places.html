@@ -1,12 +1,16 @@
 
 <ion-header>
-
   <ion-navbar>
     <ion-title>newPlaces</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 <ion-content padding>
-  <p> This is a new place page</p>
+  <form (ngSubmit)="onAddPlaceMethod(f.value)" #f=ngForm>
+    <ion-item>
+      <ion-label>Beloved Place</ion-label>
+      <ion-input type="text" name="title" ngModel required></ion-input>
+  </ion-item>
+  <button ion-button block type="submit" [disabled]="!f.valid">ADD FAV PLACE</button>
+  </form>
 </ion-content>
