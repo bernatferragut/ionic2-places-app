@@ -1,4 +1,6 @@
+import { NavController } from 'ionic-angular';
 import { Component } from '@angular/core';
+import { PlacesService } from './../../services/places.service';
 
 @Component({
   selector: 'page-new-places',
@@ -6,9 +8,10 @@ import { Component } from '@angular/core';
 })
 export class NewPlaces {
 
-  constructor() { }
+  constructor( private placesService: PlacesService, private navCtrl: NavController) { }
 
-  onAddPlaceMethod(title:string){
-    
+  onAddPlace(value: {title: string}){
+    this.placesService.AddPlace(value);
+    this.navCtrl.pop();
   }
 }
