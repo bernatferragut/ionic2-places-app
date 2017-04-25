@@ -1,6 +1,8 @@
 // Permanent Data Storage injected to this Service
 import { Storage } from '@ionic/storage';
+import { Injectable } from '@angular/core';
 
+@Injectable()
 export class PlacesService {
 
     private places: {title: string}[] = [];
@@ -16,7 +18,7 @@ export class PlacesService {
         return this.storage.get('places')
             .then(
                 (places) => {
-                    this.places = places;
+                    this.places = places == null ? []: places;
                     return this.places.slice();
                 }
             );
