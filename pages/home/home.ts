@@ -22,8 +22,12 @@ export class HomePage {
         (places) => this.places = places
       );
   }
-
+  // Load
   onLoadNewPlace(){
     this.navCtrl.push(NewPlaces);
+  }
+  // Erase
+  Erase(){
+    this.placesService.ErasePlaces();
   }
 }

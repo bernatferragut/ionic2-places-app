@@ -23,4 +23,9 @@ export class PlacesService {
                 }
             );
     }
+
+    ErasePlaces(){
+        this.storage.clear();
+        this.places = [];
+    }
 }
