@@ -1,4 +1,3 @@
-
 <ion-header>
 
   <ion-navbar>
@@ -16,7 +15,20 @@
       <ion-input type="text" name="title" ngModel required></ion-input>
     </ion-item>
 
-  <button ion-button block type="submit" [disabled]="!f.valid">ADD FAV PLACE</button>
+    <button ion-button block type="submit" [disabled]="!f.valid">ADD FAV PLACE</button>
+    <ion-grid>
+      <ion-row>
+        <ion-column>
+          <button ion-button block (click)="onLocateUser()"> LOCATE ME </button>
+        </ion-column>
+      </ion-row>
+      <ion-row>
+        <ion-column>
+          <p>YOUR LOCATION: </p>
+        </ion-column>
+      </ion-row>
+    </ion-grid>
+
 
   </form>
 
