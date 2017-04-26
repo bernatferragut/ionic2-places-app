@@ -9,7 +9,11 @@ import { Geolocation } from '@ionic-native/geolocation';
 })
 export class NewPlaces {
 
-  constructor(private placesService: PlacesService, private navCtrl: NavController, private geolocation: Geolocation) { }
+  location: any;
+
+  constructor(private placesService: PlacesService, 
+              private navCtrl: NavController, 
+              private geolocation: Geolocation) { }
 
   onAddPlace(value: {title: string}){
     this.placesService.AddPlace(value);
@@ -20,6 +24,7 @@ export class NewPlaces {
     this.geolocation.getCurrentPosition()
       .then((location) => {
         console.log('Location fetched successfully') 
+        this.location = location;
     }).catch((error) => {
           console.log('Error getting location', error);
     });
