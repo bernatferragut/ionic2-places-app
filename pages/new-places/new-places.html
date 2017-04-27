@@ -17,15 +17,12 @@
 
     <button ion-button block type="submit" [disabled]="!f.valid">ADD FAV PLACE</button>
 
-    <ion-grid>
-      <ion-row>
-        <ion-col col-12><button ion-button block (click)="onLocateUser()"> LOCATE ME </button></ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col col-6><p> LOCATION = {{ location?.coords.longitude }} / {{ location?.coords.latitude }}</p></ion-col>
-      </ion-row>
-    </ion-grid>
-
   </form>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12><button ion-button block (click)="onLocateUser()"> LOCATE ME </button></ion-col>
+    </ion-row>
+  </ion-grid>
 
 </ion-content>
