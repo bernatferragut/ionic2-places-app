@@ -14,10 +14,11 @@ export class Maplace {
 
   constructor(private viewCtrl: ViewController, 
               private navParams: NavParams) { 
-    this.lat = this.navParams.data.location.latitude // ? Undefined
+    this.lat = this.navParams.data.location.latitude; // ? Undefined
     this.lng = this.navParams.data.location.longitude; // ? Undefined
   }
 
+  //Close Page
   selfClose(){
     this.viewCtrl.dismiss();
   }
