@@ -13,7 +13,7 @@ import { Place } from './../../model/place.model';
 })
 export class HomePage {
 
-  places: { title: string}[] = [];
+  places: Place[] = [];
 
   constructor(public navCtrl: NavController, 
               private placesService: PlacesService,
@@ -28,11 +28,12 @@ export class HomePage {
   }
   // Load
   onLoadNewPlace(){
-    this.navCtrl.push(NewPlaces);
+    this.navCtrl.push(NewPlaces); // Push new page
   }
   // Erase
   Erase(){
-    this.placesService.ErasePlaces();
+    this.placesService.ErasePlaces(); // Erase DB
+    this.places = []; // Erase List
   }
 
   //OpenPlace
