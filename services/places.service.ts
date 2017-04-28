@@ -1,6 +1,7 @@
 // Permanent Data Storage injected to this Service
 import { Storage } from '@ionic/storage';
 import { Injectable } from '@angular/core';
+
 import { Place } from '../model/place.model';
 
 @Injectable()
@@ -23,7 +24,7 @@ export class PlacesService {
                     return this.places.slice();
                 }
             );
-    }
+    }   
 
     ErasePlaces(){
         this.storage.clear();

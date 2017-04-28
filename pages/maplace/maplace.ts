@@ -2,6 +2,7 @@
 
 import { Component } from '@angular/core';
 import { ViewController, NavParams } from 'ionic-angular';
+import { Place } from './../../model/place.model';
 
 @Component({
   selector: 'page-maplace',
@@ -9,13 +10,19 @@ import { ViewController, NavParams } from 'ionic-angular';
 })
 export class Maplace {
 
+  latIni: Place;
+  lngIni: Place;
+
   lat: number;
   lng: number;
 
-  constructor(private viewCtrl: ViewController, 
-              private navParams: NavParams) { 
-    this.lat = this.navParams.data.location.latitude; // ? Undefined
-    this.lng = this.navParams.data.location.longitude; // ? Undefined
+  constructor(private viewCtrl: ViewController, private navParams: NavParams) { 
+    this.latIni = this.navParams.data;
+    this.lat = this.latIni.location.lat
+    console.log(this.lat); // ? Undefined
+    this.lngIni = this.navParams.data;
+    this.lng = this.lngIni.location.lng;
+    console.log(this.lng);// ? Undefined
   }
 
   //Close Page

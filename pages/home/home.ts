@@ -36,7 +36,7 @@ export class HomePage {
     this.places = []; // Erase List
   }
 
-  //OpenPlace
+  //OpenPlace - We receive the place of type Place
   onOpenPlace(place: Place){
     this.modalCtrl.create(Maplace, place).present();
   }

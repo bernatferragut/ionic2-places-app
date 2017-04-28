@@ -9,7 +9,7 @@ import { Geolocation } from '@ionic-native/geolocation';
 })
 export class NewPlaces {
 
-  location: { lat: number, lng: number} = { lat: 0, lng: 0};
+  location: { lat: number, lng: number} = { lat: 0, lng: 0}; // initial values of location value that have to pass
 
   constructor(private placesService: PlacesService, 
               private navCtrl: NavController, 
