@@ -16,11 +16,12 @@ export class NewPlaces {
               private navCtrl: NavController, 
               private geolocation: Geolocation) { }
 
+  //ADD PLACE
   onAddPlace(value: {title: string}){
     this.placesService.AddPlace({title: value.title, location: this.location });
     this.navCtrl.pop();
   }
-
+  // USER LOCATION
   onLocateUser(){
     this.geolocation.getCurrentPosition()
       .then(

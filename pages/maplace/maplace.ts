@@ -19,10 +19,11 @@ export class Maplace {
   constructor(private viewCtrl: ViewController, private navParams: NavParams) { 
     this.latIni = this.navParams.data;
     this.lat = this.latIni.location.lat
-    console.log(this.lat); // ? Undefined
+    console.log(this.lat);
+    
     this.lngIni = this.navParams.data;
     this.lng = this.lngIni.location.lng;
-    console.log(this.lng);// ? Undefined
+    console.log(this.lng);
   }
 
   //Close Page

@@ -7,21 +7,21 @@
 </ion-header>
 
 <ion-content padding class="global">
-
+  <!--FORM-->
   <form (ngSubmit)="onAddPlace(f.value)" #f="ngForm">
 
     <ion-item class="global" >
       <ion-label>My new Fav Place</ion-label>
       <ion-input type="text" name="title" ngModel required></ion-input>
     </ion-item>
-    
+    <!--SUBMIT BUTTON-->
     <button ion-button 
             block type="submit" 
             [disabled]="!locationIn"
             >ADD FAV PLACE</button>
 
   </form>
-
+  <!--LOCATION BUTTON-->
   <ion-grid>
     <ion-row>
       <ion-col col-12>
