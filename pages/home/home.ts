@@ -26,7 +26,7 @@ export class HomePage {
         (places) => this.places = places
       );
   }
-  // Load
+  // Load new Page - Navigation
   onLoadNewPlace(){
     this.navCtrl.push(NewPlaces); // Push new page
   }

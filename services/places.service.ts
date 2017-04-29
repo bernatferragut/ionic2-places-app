@@ -1,4 +1,5 @@
 // Permanent Data Storage injected to this Service
+
 import { Storage } from '@ionic/storage';
 import { Injectable } from '@angular/core';
 
@@ -10,12 +11,13 @@ export class PlacesService {
     private places: Place[] = [];
 
     constructor ( private storage: Storage ) { }
-
+    //ADD
     AddPlace(place: Place) {
         this.places.push(place);
-        this.storage.set('places', this.places);
+        this.storage.set('places', this.places); // Key Value pair Stored
     }
 
+    //GET
     getPlaces() {
         return this.storage.get('places')
             .then(
@@ -26,6 +28,7 @@ export class PlacesService {
             );
     }   
 
+    //ERASE
     ErasePlaces(){
         this.storage.clear();
         this.places = [];

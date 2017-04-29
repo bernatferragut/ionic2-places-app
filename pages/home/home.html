@@ -4,6 +4,7 @@
     <ion-title align="center" color="light">
       FAV PLACES APP 
     </ion-title>
+    <!--NAVIGATION BUTTON-->
     <ion-buttons end>
       <button ion-button icon-only (click)="onLoadNewPlace()">
         <ion-icon name="add"></ion-icon>
@@ -16,6 +17,7 @@
 <ion-content padding class="global">
   <img src="assets/images/ionic-logo.png">
   <ion-list>
+    <!--MAP BUTTON-->
     <button ion-item class="global" *ngFor="let place of places" (click)="onOpenPlace(place)">{{ place.title }}</button>
   </ion-list>
   <button ion-button color="danger" outline block (click)="Erase()">E R A S E</button>
