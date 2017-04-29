@@ -10,6 +10,7 @@ import { Geolocation } from '@ionic-native/geolocation';
 export class NewPlaces {
 
   location: { lat: number, lng: number} = { lat: 0, lng: 0}; // initial values of location value that have to pass
+  locationIn = false;
 
   constructor(private placesService: PlacesService, 
               private navCtrl: NavController, 
@@ -27,9 +28,13 @@ export class NewPlaces {
           console.log('Location fetched successfully');
           this.location.lat = location.coords.latitude;
           this.location.lng = location.coords.longitude;
+          console.log(this.location.lat, this.location.lng); // We show the data received
+          this.locationIn = true;
     }).catch((error) => {
           console.log('Error getting location', error);
     });
+
+    
 
     }
 }

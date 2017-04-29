@@ -1,27 +1,37 @@
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>newPlaces</ion-title>
+  <ion-navbar color="navbarColor">
+    <ion-title>New FAV place</ion-title>
   </ion-navbar>
 
 </ion-header>
 
-<ion-content padding>
+<ion-content padding class="global">
 
   <form (ngSubmit)="onAddPlace(f.value)" #f="ngForm">
 
-    <ion-item>
-      <ion-label>Beloved Place</ion-label>
+    <ion-item class="global" >
+      <ion-label>My new Fav Place</ion-label>
       <ion-input type="text" name="title" ngModel required></ion-input>
     </ion-item>
-
-    <button ion-button block type="submit" [disabled]="!f.valid">ADD FAV PLACE</button>
+    
+    <button ion-button 
+            block type="submit" 
+            [disabled]="!locationIn"
+            >ADD FAV PLACE</button>
 
   </form>
 
   <ion-grid>
     <ion-row>
-      <ion-col col-12><button ion-button block (click)="onLocateUser()"> LOCATE ME </button></ion-col>
+      <ion-col col-12>
+        <button ion-button 
+                color="danger" 
+                round 
+                block 
+                (click)="onLocateUser()" 
+                [disabled]="locationIn"
+                >LOCATE ME</button></ion-col>
     </ion-row>
   </ion-grid>
 

@@ -1,22 +1,22 @@
-<ion-header>
+<ion-header class="global">
 
-  <ion-navbar>
+  <ion-navbar color="navbarColor">
+    <ion-title align="center" color="light">
+      FAV PLACES APP 
+    </ion-title>
     <ion-buttons end>
       <button ion-button icon-only (click)="onLoadNewPlace()">
         <ion-icon name="add"></ion-icon>
-    </button>
+      </button>
     </ion-buttons>
   </ion-navbar>
 
 </ion-header>
 
-<ion-content padding>
-  <p>MY FAV PLACES</p>
-
+<ion-content padding class="global">
+  <img src="assets/images/ionic-logo.png">
   <ion-list>
-    <button ion-item 
-    *ngFor="let place of places" 
-    (click)="onOpenPlace(place)">{{ place.title }}</button>
+    <button ion-item class="global" *ngFor="let place of places" (click)="onOpenPlace(place)">{{ place.title }}</button>
   </ion-list>
-  <button ion-button block (click)="Erase()">E R A SE</button>
+  <button ion-button color="danger" outline block (click)="Erase()">E R A S E</button>
 </ion-content>
