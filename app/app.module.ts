@@ -6,15 +6,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { AgmCoreModule } from 'angular2-google-maps/core';
 
-
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { NewPlaces } from './../pages/new-places/new-places';
 import { Maplace } from './../pages/maplace/maplace';
 import { PlacesService } from './../services/places.service';
 import { Geolocation } from '@ionic-native/geolocation';
-
-
 
 @NgModule({
   declarations: [
