@@ -8,7 +8,7 @@ new ionic2 fav places app
 
 2.Geolocation
 
-3.Add to a Ionic-Storage Databse
+3.Add to a Ionic-Storage Database
 
 4.With Google-Angular Plugin see the location on Google Maps.
 
